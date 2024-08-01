@@ -47,10 +47,44 @@
 	
 
 </style>
+<script>		
+	function go_save() {
+		
+		let raidoCnt = document.querySelectorAll('.chk:checked').length;
+		let checkCnt = document.querySelectorAll('.chk2:checked').length; 
+         if(id.value==""){
+                alert("이메일 입력하세요");
+                frm.id.focus();
+                return false;
+            }
+        if(password_01.value==""){
+                alert("비밀번호를 입력하세요");
+                frm.password_01.focus();
+                return false;
+             }
 
+
+		if(name.value==""){
+                alert("이름");
+                frm.name.focus();
+                return false;
+             }
+
+
+        if(raidoCnt == 0){
+                alert("성별을 선택하세요");
+            
+                return false;
+             }
+
+	}
+</script>
 </head>
 <body>
-	<form class="registration-form">
+	<header>
+		
+	</header>
+	<form class="registration-form" method="post" action="../login.do">
         <div class="form-group" id="form-id">
             <input type="email" id="email" name="email" placeholder="이메일을 입력해 주세요" >
         </div>
@@ -72,7 +106,7 @@
             <input type="radio" id="none" name="gender" value="none" >
             <label for="none" class="gender-option" id="option-nothing">선택안함</label>
         </div>
-        <button type="submit" id="signUpButton">가입 안하기 하다가? 그냥 가입하기</button>
+        <button type="submit" id="signUpButton">가입하기</button>
 	<form/>
 
 </body>
