@@ -72,7 +72,7 @@
             <input type="radio" id="none" name="gender" value="none" >
             <label for="none" class="gender-option" id="option-nothing">선택안함</label>
         </div>
-        <button type="submit" id="signUpButton">가입해봐</button>
+        <button type="submit" id="signUpButton">가입하기</button>
 	<form/>
 
 </body>
